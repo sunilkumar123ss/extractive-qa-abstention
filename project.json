@@ -1,0 +1,8 @@
+{
+  "slug": "extractive-qa-abstention",
+  "title": "Extractive QA with abstention",
+  "description": "Returns a verbatim source sentence when lexical query-term coverage exceeds a configured threshold; otherwise abstains. Every answer includes a source ID and the measured lexical coverage. This is a transparent retrieval baseline, not LLM reasoning, semantic entailment, or a guarantee that a sentence answers the question.",
+  "category": "agents",
+  "demo_args": [],
+  "expected_exit": 0
+}
