@@ -1,0 +1,4 @@
+{
+  "operations": "Audit logs are stored in the internal operations bucket. Rollback snapshots are retained for seven days.",
+  "voice": "Audio frames are processed in sequence. The demo uses synthetic frames."
+}
