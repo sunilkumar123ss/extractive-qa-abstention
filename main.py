@@ -30,3 +30,17 @@ def answer(question, sources, threshold=0.6):
     return {"abstained": False, "answer": sentence, "source_id": source,
             "sentence_index": index, "lexical_coverage": round(coverage, 4), "matched_terms": matched}
 
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("question", nargs="?", default="Where are audit logs stored?")
+    parser.add_argument("--sources", type=Path, default=Path(__file__).with_name("sources.json"))
+    parser.add_argument("--threshold", type=float, default=0.6)
+    args = parser.parse_args()
+    try:
+        result = answer(args.question, json.loads(args.sources.read_text()), args.threshold)
+    except (ValueError, OSError, TypeError) as exc:
+        parser.error(str(exc))
+    print(json.dumps(result, indent=2))
+
+if __name__ == "__main__": main()
