@@ -17,4 +17,7 @@ class QATests(unittest.TestCase):
         self.assertFalse(result["abstained"])
         self.assertIn(result["answer"], text)
         self.assertEqual(result["source_id"], "ops")
+    def test_unknown_and_stopword_only_abstain(self):
+        self.assertTrue(answer("What is the moon temperature?", {"s":"Audit logs exist."})["abstained"])
+        self.assertTrue(answer("What is it?", {"s":"It is."})["abstained"])
 
