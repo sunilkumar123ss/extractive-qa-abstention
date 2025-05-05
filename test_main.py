@@ -20,4 +20,7 @@ class QATests(unittest.TestCase):
     def test_unknown_and_stopword_only_abstain(self):
         self.assertTrue(answer("What is the moon temperature?", {"s":"Audit logs exist."})["abstained"])
         self.assertTrue(answer("What is it?", {"s":"It is."})["abstained"])
+    def test_threshold_controls_weak_matches(self):
+        self.assertTrue(answer("audio latency", {"s":"Audio streams."}, 0.9)["abstained"])
+        self.assertFalse(answer("audio latency", {"s":"Audio streams."}, 0.5)["abstained"])
 
