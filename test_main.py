@@ -23,4 +23,7 @@ class QATests(unittest.TestCase):
     def test_threshold_controls_weak_matches(self):
         self.assertTrue(answer("audio latency", {"s":"Audio streams."}, 0.9)["abstained"])
         self.assertFalse(answer("audio latency", {"s":"Audio streams."}, 0.5)["abstained"])
+    def test_invalid_threshold(self):
+        with self.assertRaises(ValueError): answer("x", {}, 2)
 
+if __name__ == "__main__": unittest.main()
