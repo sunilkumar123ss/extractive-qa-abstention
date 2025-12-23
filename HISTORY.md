@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 10 of 12. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 11 of 12. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -22,5 +22,5 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 8 | 2025-05-05T13:53:44+05:30 | Test threshold controls weak matches (present) |
 | 9 | 2025-07-09T11:45:58+05:30 | Test invalid threshold (present) |
 | 10 | 2025-11-03T12:42:58+05:30 | Add one-command test, demonstration and CLI verification (present) |
-| 11 | 2025-12-23T15:14:57+05:30 | Run verification on the supported Python CI matrix (later stage) |
+| 11 | 2025-12-23T15:14:57+05:30 | Run verification on the supported Python CI matrix (present) |
 | 12 | 2026-01-12T16:44:31+05:30 | Document usage, limitations and the disclosed reconstructed timeline (later stage) |
